@@ -137,6 +137,23 @@
       width: 40%;
       text-align: center;
     }
+
+    /* Image ronde un peu grande */
+.img-ronde {
+  border-radius: 50%;
+  width: 200px; /* Ajustez la taille selon vos besoins */
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+/* Assurez-vous que l'image normale utilise la taille par défaut */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
   </style>
   </head>
 
@@ -406,6 +423,24 @@
       </div>
       <img style="border-radius: 10%;" src="photos/IMG_1576.jpg" alt="right image">
     </div>
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <!-- Image ronde avec texte à droite -->
+        <div class="col-md-6 d-flex align-items-center">
+          <img src="photos/image_123650291 (3).JPG" alt="Image ronde" class="img-ronde me-4">
+          <div>
+            <p>" wanted to do sum cute shii, hope she likes it "</p>
+            <h2>i'm done XD</h2>
+          </div>
+        </div>
+        <!-- Image normale -->
+        <div class="col-md-6 mt-4 mt-md-0">
+          <img src="photos/IMG_1569.jpg" alt="Image normale" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <h1 style="text-align: center;">i love HER <3 </h1>
     </main>
 
 <script src="js/bootstrap.bundle.min.js"></script>
