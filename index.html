@@ -124,7 +124,7 @@
 /* Responsive adjustments for mobile */
 @media screen and (max-width: 768px) {
   .hero-image {
-    height: 400px; /* Réduire la hauteur sur les tablettes */
+    height: 450px; /* Réduire la hauteur sur les tablettes */
   }
 
   .hero-text {
@@ -135,8 +135,13 @@
 
 @media screen and (max-width: 480px) {
   .hero-image {
-    height: 300px; /* Réduire encore plus sur les téléphones */
-  }
+  width: 100%;
+  height: 450px; /* Largeur par défaut */
+  background: url('photos/IMG3.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  margin-top: 80px;
+}
 
   .hero-text {
     top: 75%;
