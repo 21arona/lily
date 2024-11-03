@@ -487,9 +487,15 @@
 
     <h1 style="text-align: center;">I love HER <3</h1>
     <div class="w-100 position-relative bg-black text-white py-vh-3">
-      <video autoplay muted loop class="w-100" style="max-height: 130vh; object-fit: cover;">
+      <video id="myVideo" autoplay muted loop class="w-100" style="max-height: 130vh; object-fit: cover;">
         <source src="photos/video.mp4" type="video/mp4">
+        <!-- Texte alternatif si la vidéo ne se charge pas -->
+        Votre navigateur ne prend pas en charge la vidéo HTML5.
       </video>
+      <!-- Bouton pour activer/désactiver le son -->
+      <button id="muteToggle" style="position: absolute; top: 20px; left: 20px; z-index: 10; padding: 10px; background-color: rgba(0, 0, 0, 0.5); color: white; border: none;">
+        Activer le son
+      </button>
     </div>
     
       
@@ -552,6 +558,22 @@ AOS.init({
         interval: 3000 // Changer la valeur pour ajuster l'intervalle en millisecondes (3000 ms = 3 secondes)
     });
 
+</script>
+<script>
+  // Obtenez l'élément vidéo et le bouton
+  const video = document.getElementById('myVideo');
+  const muteToggle = document.getElementById('muteToggle');
+
+  // Ajouter un événement de clic au bouton pour basculer le son
+  muteToggle.addEventListener('click', () => {
+    if (video.muted) {
+      video.muted = false;
+      muteToggle.textContent = "Désactiver le son";
+    } else {
+      video.muted = true;
+      muteToggle.textContent = "Activer le son";
+    }
+  });
 </script>
 
   </body>
